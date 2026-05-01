@@ -6,22 +6,23 @@ from services.ocr_service import process_ocr
 ocr_bp = Blueprint('ocr', __name__)
 
 UPLOAD_FOLDER = 'static/documents'
-ALLOWED_EXTENSIONS = {'pdf', 'jpg', 'jpeg', 'png'}
-
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @ocr_bp.route('/upload', methods=['POST'])
 def upload_file():
-    if 'file' not in request.files:
-        return jsonify({'error': 'No file part'}), 400
-    file = request.files['file']
-    if file.filename == '':
-        return jsonify({'error': 'No selected file'}), 400
-    if file and allowed_file(file.filename):
+    try:
+        if 'file' not in request.files:
+            return jsonify({'error': 'No file uploaded'}), 400
+
+        file = request.files['file']
         filename = secure_filename(file.filename)
+
         file_path = os.path.join(UPLOAD_FOLDER, filename)
         file.save(file_path)
+
         text = process_ocr(file_path)
+
         return jsonify({'text': text}), 200
-    return jsonify({'error': 'File type not allowed'}), 400
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
