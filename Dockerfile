@@ -4,7 +4,8 @@ RUN apt-get update && apt-get install -y tesseract-ocr
 
 WORKDIR /app
 
-COPY . .
+# Copy ONLY backend folder
+COPY legal-document-assistant/server/ .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
