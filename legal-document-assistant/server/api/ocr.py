@@ -6,7 +6,8 @@ from services.ocr_service import process_ocr
 ocr_bp = Blueprint('ocr', __name__)
 
 UPLOAD_FOLDER = 'static/documents'
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
 
 @ocr_bp.route('/upload', methods=['POST'])
 def upload_file():
