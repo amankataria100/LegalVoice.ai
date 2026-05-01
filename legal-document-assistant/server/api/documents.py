@@ -19,7 +19,7 @@ def upload_document():
         return jsonify({'error': 'No selected file'}), 400
 
     document = process_document(file)
-    return jsonify(document.to_dict()), 201
+    return jsonify(document), 201
 
 @documents_bp.route('/api/documents/<int:document_id>', methods=['DELETE'])
 def delete_document(document_id):
