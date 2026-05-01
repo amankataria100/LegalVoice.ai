@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.header {
+    font-size: 2rem;
+    color: #1a3c64;
+    margin-bottom: 20px;
+}
+
+.instructions {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.voice-command {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.microphone-btn {
+    background-color: #e6b800;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.microphone-btn:hover {
+    background-color: #d9ad00;
+}
+
+.status-message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.recognized-text {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    max-width: 600px;
+    width: 100%;
+    overflow-wrap: break-word;
+}

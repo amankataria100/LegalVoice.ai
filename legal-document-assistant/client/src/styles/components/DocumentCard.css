@@ -1,0 +1,45 @@
+.document-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+    transition: box-shadow 0.3s;
+}
+
+.document-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.document-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.document-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 4px 0;
+}
+
+.document-card .document-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.document-card .document-actions button {
+    background-color: #1a3c64;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.document-card .document-actions button:hover {
+    background-color: #527aa3;
+}
