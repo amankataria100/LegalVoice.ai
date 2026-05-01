@@ -6,12 +6,10 @@ from api.ocr import ocr_bp
 from api.speech import speech_bp
 import os
 
-port = int(os.environ.get("PORT", 8080))
-app.run(host="0.0.0.0", port=port)
 app = Flask(__name__)
 CORS(app)
 
-# Register blueprints for different API routes
+# Register blueprints
 app.register_blueprint(documents_bp, url_prefix='/api/documents')
 app.register_blueprint(forms_bp, url_prefix='/api/forms')
 app.register_blueprint(ocr_bp, url_prefix='/api/ocr')
@@ -22,4 +20,5 @@ def home():
     return "Welcome to the Legal Document Assistant API!"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
