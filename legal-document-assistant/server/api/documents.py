@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from models.document import Document
-from server.services.document_processor import process_document
+from services.document_processor import process_document
 
 documents_bp = Blueprint('documents', __name__)
 

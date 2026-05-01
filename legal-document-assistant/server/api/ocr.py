@@ -1,11 +1,11 @@
 from flask import Blueprint, request, jsonify
 from werkzeug.utils import secure_filename
 import os
-from server.services.ocr_service import process_ocr
+from services.ocr_service import process_ocr
 
 ocr_bp = Blueprint('ocr', __name__)
 
-UPLOAD_FOLDER = 'server/static/documents'
+UPLOAD_FOLDER = 'static/documents'
 ALLOWED_EXTENSIONS = {'pdf', 'jpg', 'jpeg', 'png'}
 
 def allowed_file(filename):
