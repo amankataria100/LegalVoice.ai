@@ -44,19 +44,40 @@
             </div>
 
             <div class="document-analysis" id="documentAnalysis" style="display: none;">
-                <div class="analysis-tabs">
-                    <div id="summary" class="tab-pane active">
-    <div id="summaryContent"></div>
-</div>
 
-<div id="extractedText" class="tab-pane">
-    <pre id="extractedTextContent"></pre>
-</div>
+    <!-- 🔥 TAB BUTTONS -->
+    <div class="analysis-tabs">
+        <button class="tab-button active" data-tab="summaryTab">Summary</button>
+        <button class="tab-button" data-tab="extractedTab">Extracted Text</button>
+        <button class="tab-button" data-tab="chatTab">Ask Questions</button>
+    </div>
 
-<div id="chat" class="tab-pane">
-    <p>Coming soon...</p>
+    <!-- 🔥 TAB CONTENT -->
+    <div class="tab-content">
+
+        <!-- SUMMARY -->
+        <div class="tab-pane active" id="summaryTab">
+            <h3>Document Summary</h3>
+            <div id="summaryContent"></div>
+
+            <h3>Key Information Detected</h3>
+            <div id="keyInfoGrid"></div>
+        </div>
+
+        <!-- EXTRACTED TEXT -->
+        <div class="tab-pane" id="extractedTab">
+            <h3>Extracted Text</h3>
+            <pre id="extractedTextContent"></pre>
+        </div>
+
+        <!-- CHAT -->
+        <div class="tab-pane" id="chatTab">
+            <h3>Ask About This Document</h3>
+            <p>Coming soon...</p>
+        </div>
+
+    </div>
 </div>
-                </div>
 
                 <div class="tab-content">
                     <div class="tab-pane active" id="summary">

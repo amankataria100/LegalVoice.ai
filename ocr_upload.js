@@ -135,4 +135,15 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(message);
     }
 
+});document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', function () {
+
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+
+        this.classList.add('active');
+
+        const tab = this.getAttribute('data-tab');
+        document.getElementById(tab).classList.add('active');
+    });
 });
