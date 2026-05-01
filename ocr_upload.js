@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const documentAnalysis = document.getElementById('documentAnalysis');
     const summaryContent = document.getElementById('summaryContent');
     const keyInfoGrid = document.getElementById('keyInfoGrid');
-    const extractedText = document.getElementById('extractedText');
+    const extractedText = document.getElementById('extractedTextContent');
 
     let currentDocumentData = null;
 
