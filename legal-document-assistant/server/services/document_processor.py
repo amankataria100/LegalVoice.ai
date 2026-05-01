@@ -1,5 +1,5 @@
-from pdf_generator import generate_pdf
-from ocr_service import process_ocr
+from utils.pdf_generator import generate_pdf
+from services.ocr_service import process_ocr
 from models.document import Document
 from models.form import Form
 
