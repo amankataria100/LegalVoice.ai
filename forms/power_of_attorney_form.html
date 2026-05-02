@@ -1,34 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Power of Attorney</title>
 <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
 
+<header>
+<img src="../logo.png" style="width:100px;margin:auto;display:block;">
 <h1>Power of Attorney</h1>
+</header>
 
-<form>
+<div id="nav-placeholder"></div>
 
-<div class="form-group">
-<label>Grantor Name</label>
-<input type="text">
+<div class="container">
+<div class="dual-panel">
+
+<div class="voice-panel">
+<div class="panel">
+<h2>Voice Recognition</h2>
+<button id="microphoneBtn">Start</button>
+<div id="statusMessage"></div>
+</div>
 </div>
 
-<div class="form-group">
-<label>Agent Name</label>
-<input type="text">
-</div>
+<div class="form-panel">
+<div class="panel">
 
-<div class="form-group">
-<label>Powers Granted</label>
-<textarea></textarea>
-</div>
+<form id="legalForm">
 
-<button>Generate POA</button>
+<input type="text" id="grantor" placeholder="Grantor Name">
+<input type="text" id="agent" placeholder="Agent Name">
+<textarea id="powers" placeholder="Powers"></textarea>
+
+<button>Generate</button>
 
 </form>
+</div>
+</div>
 
+</div>
+</div>
+
+<script src="../form_scripts/power_of_attorney_form.js"></script>
 </body>
 </html>

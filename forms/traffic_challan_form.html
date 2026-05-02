@@ -1,80 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Traffic Challan Form - LegalVoice.AI</title>
-    <link rel="stylesheet" href="../styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traffic Challan - LegalVoice.AI</title>
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
 
 <header>
-    <img src="../logo.png" style="width:100px; display:block; margin:auto;">
-    <h1>Traffic Challan Form</h1>
-    <p class="subheading">Complete your challan using voice commands</p>
+<img src="../logo.png" style="width:100px;margin:auto;display:block;">
+<h1>Traffic Challan</h1>
+<p class="subheading">Complete your challan using voice commands</p>
 </header>
 
 <div id="nav-placeholder"></div>
 
 <div class="container">
-    <div class="dual-panel">
+<div class="dual-panel">
 
-        <!-- 🎤 VOICE PANEL -->
-        <div class="voice-panel">
-            <div class="panel">
-                <h2>Voice Recognition</h2>
+<div class="voice-panel">
+<div class="panel">
+<h2>Voice Recognition</h2>
+<button id="microphoneBtn">Start Voice Recognition</button>
+<div id="statusMessage">Click to start voice recognition.</div>
 
-                <button id="microphoneBtn">Start Voice Recognition</button>
-
-                <div id="statusMessage">
-                    Click to start voice recognition.
-                </div>
-
-                <div id="recognizedText" style="display:none;">
-                    <p id="transcriptText"></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 📄 FORM PANEL -->
-        <div class="form-panel">
-            <div class="panel">
-
-                <h2>Traffic Challan Form</h2>
-
-                <form id="legalForm">
-
-                    <div class="form-group">
-                        <label>Vehicle Number</label>
-                        <input type="text" id="vehicleNumber" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Owner Name</label>
-                        <input type="text" id="ownerName" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Violation Type</label>
-                        <input type="text" id="violation" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Fine Amount</label>
-                        <input type="text" id="fineAmount" required>
-                    </div>
-
-                    <div class="form-footer">
-                        <button type="button" id="clearFormBtn">Clear</button>
-                        <button type="button" id="downloadFormBtn">Download</button>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-
-    </div>
+<div id="recognizedText" style="display:none;">
+<p id="transcriptText"></p>
 </div>
+</div>
+</div>
+
+<div class="form-panel">
+<div class="panel">
+<h2>Traffic Challan Form</h2>
+
+<form id="legalForm">
+
+<div class="form-group">
+<label>Vehicle Number</label>
+<input type="text" id="vehicleNumber">
+</div>
+
+<div class="form-group">
+<label>Owner Name</label>
+<input type="text" id="ownerName">
+</div>
+
+<div class="form-group">
+<label>Violation Type</label>
+<input type="text" id="violation">
+</div>
+
+<div class="form-group">
+<label>Fine Amount</label>
+<input type="text" id="fineAmount">
+</div>
+
+<div class="form-group">
+<label>Date</label>
+<input type="date" id="date">
+</div>
+
+<div class="form-footer">
+<button type="button" id="clearFormBtn">Clear</button>
+<button type="button" id="downloadFormBtn">Download</button>
+</div>
+
+</form>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="legal-disclaimer">
+<p>Demo only. Not legal advice.</p>
+</div>
+
+<footer>
+<p>&copy; 2025 LegalVoice.AI</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$("#nav-placeholder").load("../nav.html");
+</script>
 
 <script src="../form_scripts/traffic_challan_form.js"></script>
 

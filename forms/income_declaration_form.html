@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Income Declaration</title>
 <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
 
+<header>
+<img src="../logo.png">
 <h1>Income Declaration</h1>
+</header>
 
-<form>
+<div class="container">
+<form id="legalForm">
 
-<div class="form-group">
-<label>Name</label>
-<input type="text">
-</div>
+<input type="text" id="name">
+<input type="text" id="income">
+<input type="text" id="occupation">
 
-<div class="form-group">
-<label>Annual Income</label>
-<input type="text">
-</div>
-
-<div class="form-group">
-<label>Occupation</label>
-<input type="text">
-</div>
-
-<button>Generate Declaration</button>
+<button>Generate</button>
 
 </form>
+</div>
 
+<script src="../form_scripts/income_declaration_form.js"></script>
 </body>
 </html>
