@@ -1,41 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Rent Agreement</title>
-<link rel="stylesheet" href="../styles.css">
-</head>
-
-<body>
-
+<!-- SAME STRUCTURE AS ABOVE -->
 <h1>Rent Agreement</h1>
+<p class="subheading">Create rental agreement using voice</p>
 
-<form>
+<!-- Replace only form fields -->
+<form id="legalForm">
 
 <div class="form-group">
 <label>Tenant Name</label>
-<input type="text">
+<input type="text" id="tenantName">
 </div>
 
 <div class="form-group">
 <label>Owner Name</label>
-<input type="text">
+<input type="text" id="ownerName">
 </div>
 
 <div class="form-group">
 <label>Rent Amount</label>
-<input type="text">
+<input type="text" id="rentAmount">
 </div>
 
 <div class="form-group">
 <label>Property Address</label>
-<textarea></textarea>
-</div>
-
-<div class="form-footer">
-<button>Generate Agreement</button>
+<textarea id="propertyAddress"></textarea>
 </div>
 
 </form>
 
-</body>
-</html>
+<script src="../form_scripts/rent_agreement_form.js"></script>
