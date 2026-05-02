@@ -1,29 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rent Agreement</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
 <h1>Rent Agreement</h1>
-<script src="../form_scripts/common_form.js"></script>
-<form id="legalForm">
-    <div class="form-group">
-        <label>Tenant Name</label>
-        <input type="text" id="tenantName" required>
-    </div>
 
-    <div class="form-group">
-        <label>Owner Name</label>
-        <input type="text" id="ownerName" required>
-    </div>
+<form>
 
-    <div class="form-group">
-        <label>Rent Amount</label>
-        <input type="text" id="rentAmount" required>
-    </div>
+<div class="form-group">
+<label>Tenant Name</label>
+<input type="text">
+</div>
 
-    <div class="form-group">
-        <label>Property Address</label>
-        <input type="text" id="propertyAddress" required>
-    </div>
+<div class="form-group">
+<label>Owner Name</label>
+<input type="text">
+</div>
 
+<div class="form-group">
+<label>Rent Amount</label>
+<input type="text">
+</div>
 
-    <div class="form-footer">
-        <button type="button" id="clearFormBtn">Clear</button>
-        <button type="button" id="downloadFormBtn">Download</button>
-    </div>
+<div class="form-group">
+<label>Property Address</label>
+<textarea></textarea>
+</div>
+
+<div class="form-footer">
+<button>Generate Agreement</button>
+</div>
+
 </form>
+
+</body>
+</html>
