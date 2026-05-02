@@ -19,4 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("powers").value = text.replace("power", "");
         }
     };
+});document.getElementById("clearFormBtn")?.addEventListener("click", () => {
+    document.getElementById("legalForm").reset();
+});
+
+document.getElementById("saveFormBtn")?.addEventListener("click", () => {
+    alert("Form saved successfully!");
+});
+
+document.getElementById("downloadFormBtn")?.addEventListener("click", () => {
+    const data = new FormData(document.getElementById("legalForm"));
+    console.log(Object.fromEntries(data));
 });
