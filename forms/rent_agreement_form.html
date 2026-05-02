@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <script src="https://cdn.jsdelivr.net/npm/date-fns@2.23.0/dist/date-fns.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>__TITLE__ - LegalVoice.AI</title>
+    <title>Rent Agreement Form - LegalVoice.AI</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 
@@ -12,8 +12,8 @@
 
 <header>
     <img src="../logo.png" style="width:100px; display:block; margin:auto;">
-    <h1>__TITLE__</h1>
-    <p class="subheading">__SUBTITLE__</p>
+    <h1>Rent Agreement</h1>
+<p class="subheading">Create a rental agreement using voice input</p>
 </header>
 
 <div id="nav-placeholder"></div>
@@ -33,7 +33,17 @@
 <div id="statusMessage">
 Click to start voice recognition.
 </div>
-
+<div class="voice-instructions">
+<h3>Voice Command Tips:</h3>
+<ul>
+<li>Say "Tenant name: Rahul Sharma"</li>
+<li>Say "Owner name: Amit Verma"</li>
+<li>Say "Rent: 15000"</li>
+<li>Say "Address: Delhi, India"</li>
+<li>Say "Clear form" to reset</li>
+<li>Say "Submit form" to generate agreement</li>
+</ul>
+</div>
 <div id="recognizedText" style="display:none;">
 <h3>Recognized Speech:</h3>
 <p id="transcriptText"></p>
@@ -91,7 +101,7 @@ $(function(){
 });
 </script>
 
-<script src="../form_scripts/__SCRIPT__"></script>
+<script src="../form_scripts/rent_agreement_form.js"></script>
 
 </body>
 </html>
