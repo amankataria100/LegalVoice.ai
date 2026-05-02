@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.23.0/dist/date-fns.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__TITLE__ - LegalVoice.AI</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+<header>
+    <img src="../logo.png" style="width:100px; display:block; margin:auto;">
+    <h1>__TITLE__</h1>
+    <p class="subheading">__SUBTITLE__</p>
+</header>
+
+<div id="nav-placeholder"></div>
+
+<div class="container">
+<div class="dual-panel">
+
+<!-- 🎤 VOICE PANEL -->
+<div class="voice-panel">
+<div class="panel">
+<div class="panel-header">
+<h2>Voice Recognition</h2>
+</div>
+
+<button id="microphoneBtn">Start Voice Recognition</button>
+
+<div id="statusMessage">
+Click to start voice recognition.
+</div>
+
+<div id="recognizedText" style="display:none;">
+<h3>Recognized Speech:</h3>
+<p id="transcriptText"></p>
+</div>
+
+</div>
+</div>
+
+<!-- 📄 FORM PANEL -->
+<div class="form-panel">
+<div class="panel">
+
+<div class="panel-header">
+<h2>__FORM_TITLE__</h2>
+</div>
+
+<form id="legalForm">
+
+__FIELDS__
+
+<div class="form-footer">
+<button type="button" id="clearFormBtn">Clear Form</button>
+<button type="button" id="saveFormBtn">Save Form</button>
+<button type="button" id="downloadFormBtn">Download Form</button>
+</div>
+
+</form>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="legal-disclaimer">
+<p><strong>Disclaimer:</strong> Demo purpose only.</p>
+</div>
+
+<footer>
+<p>&copy; 2025 LegalVoice.AI</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+    $("#nav-placeholder").load("../nav.html");
+});
+</script>
+
+<script src="../form_scripts/__SCRIPT__"></script>
+
+</body>
+</html>
