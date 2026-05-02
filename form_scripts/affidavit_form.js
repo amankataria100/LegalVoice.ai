@@ -397,8 +397,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Check if document type was set in localStorage
     const documentType = localStorage.getItem('selectedDocumentType');
-    if (documentType && documentType !== 'affidavit') {
-        statusMessage.textContent = "It seems you've been redirected to the wrong form. Please go back and select the correct document type.";
-        statusMessage.className = "status-message error";
-    }
+
 });

@@ -1,8 +1,18 @@
 <h1>Income Declaration</h1>
+<script src="../form_scripts/common_form.js"></script>
+<form id="legalForm">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" id="name" required>
+    </div>
 
-<form>
-    <input type="text" placeholder="Name"><br><br>
-    <input type="text" placeholder="Annual Income"><br><br>
+    <div class="form-group">
+        <label>Annual Income</label>
+        <input type="text" id="annualIncome" required>
+    </div>
 
-    <button type="button">Download</button>
+    <div class="form-footer">
+        <button type="button" id="clearFormBtn">Clear</button>
+        <button type="button" id="downloadFormBtn">Download</button>
+    </div>
 </form>

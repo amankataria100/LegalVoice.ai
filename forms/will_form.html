@@ -1,8 +1,19 @@
 <h1>Will Document</h1>
+<script src="../form_scripts/common_form.js"></script>
+<form id="legalForm">
+    <div class="form-group">
+        <label>Testator Name</label>
+        <input type="text" id="testatorName" required>
+    </div>
 
-<form>
-    <input type="text" placeholder="Testator Name"><br><br>
-    <textarea placeholder="Assets Distribution"></textarea><br><br>
+    <div class="form-group">
+        <label>Assets Distribution</label>
+        <textarea id="assetsDistribution" required></textarea>
+    </div>
 
-    <button type="button">Download</button>
+    <div class="form-footer">
+        <button type="button" id="clearFormBtn">Clear</button>
+        <button type="button" id="downloadFormBtn">Download</button>
+    </div>
+
 </form>

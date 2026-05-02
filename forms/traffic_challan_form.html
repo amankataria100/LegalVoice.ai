@@ -2,22 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Traffic Challan Form</title>
+    <title>Traffic Challan Form - LegalVoice.AI</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
 
-<h1>Traffic Challan Form</h1>
+<header>
+    <img src="../logo.png" style="width:100px; display:block; margin:auto;">
+    <h1>Traffic Challan Form</h1>
+    <p class="subheading">Complete your challan using voice commands</p>
+</header>
 
-<form id="legalForm">
-    <input type="text" id="vehicleNumber" placeholder="Vehicle Number"><br><br>
-    <input type="text" id="ownerName" placeholder="Owner Name"><br><br>
-    <input type="text" id="violation" placeholder="Violation Type"><br><br>
-    <input type="text" id="fineAmount" placeholder="Fine Amount"><br><br>
+<div id="nav-placeholder"></div>
 
-    <button type="button" id="downloadFormBtn">Download</button>
-</form>
+<div class="container">
+    <div class="dual-panel">
+
+        <!-- 🎤 VOICE PANEL -->
+        <div class="voice-panel">
+            <div class="panel">
+                <h2>Voice Recognition</h2>
+
+                <button id="microphoneBtn">Start Voice Recognition</button>
+
+                <div id="statusMessage">
+                    Click to start voice recognition.
+                </div>
+
+                <div id="recognizedText" style="display:none;">
+                    <p id="transcriptText"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 📄 FORM PANEL -->
+        <div class="form-panel">
+            <div class="panel">
+
+                <h2>Traffic Challan Form</h2>
+
+                <form id="legalForm">
+
+                    <div class="form-group">
+                        <label>Vehicle Number</label>
+                        <input type="text" id="vehicleNumber" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Owner Name</label>
+                        <input type="text" id="ownerName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Violation Type</label>
+                        <input type="text" id="violation" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fine Amount</label>
+                        <input type="text" id="fineAmount" required>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="button" id="clearFormBtn">Clear</button>
+                        <button type="button" id="downloadFormBtn">Download</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <script src="../form_scripts/traffic_challan_form.js"></script>
+
 </body>
 </html>
