@@ -1,10 +1,16 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api'; // Adjust the base URL as needed
+const API_BASE_URL = 'https://legalvoice-ai.onrender.com/api';
+
+const api = axios.create({
+    baseURL: API_BASE_URL,
+});
+
+export default api;
 
 export const fetchCompletedForms = async () => {
     try {
-        const response = await axios.get(`${API_BASE_URL}/forms/completed`);
+        const response = await api.get('/forms/completed');
         return response.data;
     } catch (error) {
         console.error('Error fetching completed forms:', error);
@@ -14,7 +20,7 @@ export const fetchCompletedForms = async () => {
 
 export const uploadDocument = async (formData) => {
     try {
-        const response = await axios.post(`${API_BASE_URL}/documents/upload`, formData, {
+        const response = await api.post('/documents/upload', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
@@ -28,7 +34,7 @@ export const uploadDocument = async (formData) => {
 
 export const submitUserDetails = async (userData) => {
     try {
-        const response = await axios.post(`${API_BASE_URL}/forms/submit`, userData);
+        const response = await api.post('/forms/submit', userData);
         return response.data;
     } catch (error) {
         console.error('Error submitting user details:', error);
@@ -38,7 +44,7 @@ export const submitUserDetails = async (userData) => {
 
 export const getSupportedDocuments = async () => {
     try {
-        const response = await axios.get(`${API_BASE_URL}/documents/supported`);
+        const response = await api.get('/documents/supported');
         return response.data;
     } catch (error) {
         console.error('Error fetching supported documents:', error);
