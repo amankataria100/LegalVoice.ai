@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './FormField.css';
+import '../styles/components/FormField.css';
 
 const FormField = ({ label, type, value, onChange, required, error }) => {
     return (

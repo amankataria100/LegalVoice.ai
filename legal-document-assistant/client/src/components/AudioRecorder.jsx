@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAudioRecording } from '../hooks/useAudioRecording';
-import './AudioRecorder.css';
+import '../styles/components/AudioRecorder.css';
 
 const AudioRecorder = ({ onRecordingComplete }) => {
     const { isRecording, startRecording, stopRecording, audioBlob } = useAudioRecording();

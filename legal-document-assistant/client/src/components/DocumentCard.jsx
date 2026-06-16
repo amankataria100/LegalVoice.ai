@@ -1,5 +1,5 @@
 import React from 'react';
-import './DocumentCard.css';
+import '../styles/components/DocumentCard.css';
 
 const DocumentCard = ({ document, onSelect }) => {
     return (
