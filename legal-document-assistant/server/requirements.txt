@@ -9,4 +9,5 @@ python-dotenv==0.19.2
 requests==2.26.0
 PyPDF2==1.26.0
 gunicorn==23.0.0
+SQLAlchemy==1.4.52
 Werkzeug==2.1.2
