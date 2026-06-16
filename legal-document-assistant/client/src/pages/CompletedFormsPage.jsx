@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import DocumentCard from '../components/DocumentCard';
 import { fetchCompletedForms } from '../services/documentService';
-import './CompletedFormsPage.css';
+import '../styles/global.css';
 
 const CompletedFormsPage = () => {
     const [completedForms, setCompletedForms] = useState([]);

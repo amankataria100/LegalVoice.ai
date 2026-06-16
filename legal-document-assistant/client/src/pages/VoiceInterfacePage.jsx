@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AudioRecorder from '../components/AudioRecorder';
 import ChatInterface from '../components/ChatInterface';
-import './VoiceInterfacePage.css';
+import '../styles/pages/VoiceInterfacePage.css';
 
 const VoiceInterfacePage = () => {
     const [isRecording, setIsRecording] = useState(false);

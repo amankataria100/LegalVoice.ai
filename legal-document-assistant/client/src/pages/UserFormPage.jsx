@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import FormField from '../components/FormField';
-import './UserFormPage.css';
+import '../styles/global.css';
 
 const UserFormPage = () => {
     const [formData, setFormData] = useState({
