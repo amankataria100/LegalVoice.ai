@@ -33,4 +33,11 @@ export const deleteDocument = async (documentId) => {
     } catch (error) {
         throw new Error('Error deleting document: ' + error.message);
     }
+};export const fetchCompletedForms = async () => {
+    try {
+        const response = await api.get('/forms/completed');
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching completed forms: ' + error.message);
+    }
 };
