@@ -13,7 +13,7 @@ import './App.css';
 
 const App = () => {
     return (
-        <UserContextProvider>
+        <UserProvider>
             <Router>
                 <Navbar />
                 <Switch>
@@ -26,7 +26,7 @@ const App = () => {
                 </Switch>
                 <Footer />
             </Router>
-        </UserContextProvider>
+        </UserProvider>
     );
 };
 
